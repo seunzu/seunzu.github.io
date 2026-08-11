@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
-import { caseStudies } from "@/data/case-studies";
-import { layout, text } from "@/lib/design";
+import { getCaseStudyBySlug, getCaseStudyStaticParams } from "@/data/case-studies";
+import { layout, surface, text } from "@/lib/design";
+import type { CaseStudyLink } from "@/types/content";
 
 export function generateStaticParams() {
-  return caseStudies.map((study) => ({
-    slug: study.slug,
-  }));
+  return getCaseStudyStaticParams();
 }
 
 type CaseStudyPageProps = {
@@ -16,7 +15,7 @@ type CaseStudyPageProps = {
 
 export async function generateMetadata({ params }: CaseStudyPageProps) {
   const { slug } = await params;
-  const study = caseStudies.find((item) => item.slug === slug);
+  const study = getCaseStudyBySlug(slug);
 
   if (!study) {
     return {
@@ -32,7 +31,7 @@ export async function generateMetadata({ params }: CaseStudyPageProps) {
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   const { slug } = await params;
-  const study = caseStudies.find((item) => item.slug === slug);
+  const study = getCaseStudyBySlug(slug);
 
   if (!study) {
     notFound();
@@ -46,9 +45,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         </a>
 
         <header className="mt-6 border-b border-[var(--line)] pb-5">
-          <p className="inline-flex rounded-full bg-[var(--accent-soft)] px-2 py-0.5 text-[10px] font-semibold leading-4 text-[var(--accent-dark)]">
-            {study.label}
-          </p>
+          <p className={surface.labelChip}>{study.label}</p>
           <h1 className="mt-2.5 text-xl font-extrabold leading-tight text-[var(--foreground)] sm:text-2xl">
             {study.title}
           </h1>
@@ -86,11 +83,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   );
 }
 
-function StudyLinks({
-  links,
-}: {
-  links: NonNullable<(typeof caseStudies)[number]["links"]>;
-}) {
+function StudyLinks({ links }: { links: CaseStudyLink[] }) {
   return (
     <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
       {links.map((link) => (

@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     period: "2024.11 ~ 2024.12",
     title: "가치있는 결제의 시작, 플랜티파이(PlantiFy)",
-    role: "Backend Developer",
+    role: "Backend Developer · PM",
     description:
       "카드 혜택, 펀딩형 기부, 숲 꾸미기, AI 추천 챗봇, 외부 결제 API를 제공하는 MSA 기반 통합 페이 결제 플랫폼",
     highlights: [
@@ -65,7 +65,7 @@ export const projects: Project[] = [
   {
     period: "2024.08 ~ 2024.09",
     title: "나의 첫 가상화폐 웹 애플리케이션, 비트릭스(Bitrics)",
-    role: "Backend Developer",
+    role: "Backend Developer · PM",
     description:
       "실시간 가상화폐 시세와 지표를 수집, 가공해 여러 거래소 자산을 한 곳에서 분석하는 투자 분석 서비스",
     highlights: [
@@ -79,7 +79,7 @@ export const projects: Project[] = [
   {
     period: "2024.01 ~ 2024.04",
     title: "투자 기초 설명서, 투설이(Tusori)",
-    role: "Backend Developer",
+    role: "Backend Developer · PM",
     description:
       "실시간 주식 시세, 재무지표, 차트를 기반으로 매수, 매도 시뮬레이션을 제공하는 주식 모의투자 플랫폼",
     highlights: [
@@ -178,7 +178,7 @@ export const awards: Award[] = [
   {
     date: "2023.12",
     award: "동상",
-    event: "캡스톤 디자인 경진대회",
+    event: "캡스톤디자인 경진대회",
     project: "시각 장애인 대상 성분 기반 의약외품 추천 서비스",
     organizer: "서울여자대학교",
   },

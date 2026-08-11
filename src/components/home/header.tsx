@@ -1,15 +1,18 @@
 import { externalLinks } from "@/data/profile";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function HomeHeader() {
   return (
     <header className="border-b border-[var(--line-strong)] pb-6">
-      <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
-        <div>
-          <h1 className="text-3xl font-extrabold leading-tight tracking-normal">
-            SeungJuSuh(서승주)
-          </h1>
-          <p className="mt-2 text-sm leading-5 text-[var(--foreground)]">Software Engineer</p>
-        </div>
+      <div className="mb-5 flex justify-end">
+        <LanguageSwitcher />
+      </div>
+
+      <div>
+        <h1 className="text-3xl font-extrabold leading-tight tracking-normal">
+          SeungJuSuh(서승주)
+        </h1>
+        <p className="mt-2 text-base leading-6 text-[var(--foreground)]">Software Engineer</p>
       </div>
 
       <ContactList />

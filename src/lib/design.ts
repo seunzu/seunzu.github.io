@@ -12,4 +12,6 @@ export const text = {
 export const surface = {
   card: "rounded-lg border border-[var(--line)] bg-white p-4",
   divider: "border-[var(--line)]",
+  labelChip:
+    "inline-flex rounded-full bg-[var(--accent-soft)] px-2 py-0.5 text-[10px] font-semibold leading-4 text-[var(--accent-dark)]",
 };

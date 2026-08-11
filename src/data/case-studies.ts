@@ -248,3 +248,13 @@ export const caseStudies: CaseStudy[] = [
     next: [],
   },
 ];
+
+export function getCaseStudyBySlug(slug: string) {
+  return caseStudies.find((study) => study.slug === slug);
+}
+
+export function getCaseStudyStaticParams() {
+  return caseStudies.map((study) => ({
+    slug: study.slug,
+  }));
+}

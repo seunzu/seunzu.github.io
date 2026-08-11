@@ -7,8 +7,8 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className={`flex h-full flex-col ${surface.card}`}>
       <div className="grid gap-1 sm:grid-cols-[minmax(0,1fr)_120px] sm:items-start">
         <div>
-          <h3 className="text-sm font-semibold text-[var(--foreground)]">{project.title}</h3>
-          <p className="mt-1 text-[11px] leading-5 text-[var(--muted-light)]">{project.role}</p>
+          <span className={surface.labelChip}>{project.role}</span>
+          <h3 className="mt-2.5 text-sm font-semibold text-[var(--foreground)]">{project.title}</h3>
         </div>
         <p className="text-[11px] leading-5 text-[var(--muted-light)] sm:text-right">
           {project.period}
@@ -59,9 +59,7 @@ export function CaseStudyCard({ item }: { item: CaseStudy }) {
   return (
     <article className={`flex h-full flex-col ${surface.card}`}>
       <div>
-        <span className="inline-flex rounded-full bg-[var(--accent-soft)] px-2 py-0.5 text-[10px] font-semibold leading-4 text-[var(--accent-dark)]">
-          {item.label}
-        </span>
+        <span className={surface.labelChip}>{item.label}</span>
         <h3 className="mt-2.5 text-sm font-semibold leading-snug text-[var(--foreground)]">
           {item.title}
         </h3>
