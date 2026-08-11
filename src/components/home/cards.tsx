@@ -1,43 +1,5 @@
 import { surface, text } from "@/lib/design";
-import type { CaseStudy, Metric, Project } from "@/types/content";
-import { StackChips } from "./stack-chips";
-
-export function ProjectCard({ project }: { project: Project }) {
-  return (
-    <article className={`flex h-full flex-col ${surface.card}`}>
-      <div className="grid gap-1 sm:grid-cols-[minmax(0,1fr)_120px] sm:items-start">
-        <div>
-          <span className={surface.labelChip}>{project.role}</span>
-          <h3 className="mt-2.5 text-sm font-semibold text-[var(--foreground)]">{project.title}</h3>
-        </div>
-        <p className="text-[11px] leading-5 text-[var(--muted-light)] sm:text-right">
-          {project.period}
-        </p>
-      </div>
-      <div>
-        <p className={`mt-2 max-w-3xl ${text.smallBody}`}>{project.description}</p>
-        <div className="mt-3">
-          <StackChips stacks={project.stacks} />
-        </div>
-        <ul className="mt-3 grid gap-1.5 pl-4 text-[12px] leading-6 text-[var(--body)] marker:text-[var(--accent-dark)]">
-          {project.highlights.map((highlight) => (
-            <li className="list-disc" key={highlight}>
-              {highlight}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <a
-        className={`mt-auto self-end pt-3 ${text.link}`}
-        href={project.href}
-        target="_blank"
-        rel="noreferrer"
-      >
-        {project.href.replace("https://", "")}
-      </a>
-    </article>
-  );
-}
+import type { CaseStudy, Locale, Metric } from "@/types/content";
 
 export function MetricsGrid({ metrics }: { metrics: Metric[] }) {
   return (
@@ -55,7 +17,18 @@ export function MetricsGrid({ metrics }: { metrics: Metric[] }) {
   );
 }
 
-export function CaseStudyCard({ item }: { item: CaseStudy }) {
+export function CaseStudyCard({
+  item,
+  locale,
+  viewDetailsLabel,
+}: {
+  item: CaseStudy;
+  locale: Locale;
+  viewDetailsLabel: string;
+}) {
+  const detailHref =
+    locale === "en" ? `/en/case-studies/${item.slug}` : `/case-studies/${item.slug}`;
+
   return (
     <article className={`flex h-full flex-col ${surface.card}`}>
       <div>
@@ -72,8 +45,8 @@ export function CaseStudyCard({ item }: { item: CaseStudy }) {
           ))}
         </ul>
       </div>
-      <a className={`mt-auto self-end pt-3 ${text.link}`} href={`/case-studies/${item.slug}`}>
-        자세히 보기
+      <a className={`mt-auto self-end pt-3 ${text.link}`} href={detailHref}>
+        {viewDetailsLabel}
       </a>
     </article>
   );

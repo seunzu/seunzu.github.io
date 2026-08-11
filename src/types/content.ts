@@ -1,3 +1,39 @@
+export type Locale = "ko" | "en";
+
+export type IntroContent = {
+  title: string;
+  headline: string;
+  paragraphs: string[];
+};
+
+export type HomeLabels = {
+  stack: string;
+  experience: string;
+  selectedProjects: string;
+  refactoringCaseStudy: string;
+  refactoringLead: string;
+  education: string;
+  activitiesAndAwards: string;
+  activities: string;
+  awards: string;
+  qualifications: string;
+  certificates: string;
+  languages: string;
+  viewDetails: string;
+  backToTop: string;
+  copyright: string;
+};
+
+export type CaseStudyDetailLabels = {
+  backToMain: string;
+  problem: string;
+  causes: string;
+  approach: string;
+  tradeoffs: string;
+  results: string;
+  next: string;
+};
+
 export type Project = {
   period: string;
   title: string;
@@ -6,6 +42,13 @@ export type Project = {
   highlights: string[];
   stacks: string[];
   href: string;
+  visuals?: ProjectVisual[];
+};
+
+export type ProjectVisual = {
+  src: string;
+  alt: string;
+  label: string;
 };
 
 export type TimelineItem = {

@@ -1,16 +1,42 @@
 import type {
   Activity,
   Award,
+  HomeLabels,
+  IntroContent,
   Metric,
   Project,
   SimpleCredential,
   TimelineItem,
 } from "@/types/content";
+import { projectAssets } from "./shared";
 
-export const externalLinks = {
-  email: "mailto:0123suh@gmail.com",
-  github: "https://github.com/seunzu",
-  blog: "https://debug.tistory.com",
+export const homeIntro: IntroContent = {
+  title: "Intro",
+  headline: "문제를 구조적으로 정의하고 끝까지 개선하는 개발자 서승주입니다.",
+  paragraphs: [
+    "가상화폐 투자 분석 서비스와 MSA 기반 결제 플랫폼을 주도적으로 설계하고 구축하며 동시성 환경에서의 트랜잭션 정합성과 처리 성능을 함께 다루는 경험을 쌓았습니다.",
+    "v1에서 멈추지 않고 성능 병목을 추적하고 안정성을 반복적으로 개선합니다.",
+    "도전적인 환경을 선호하며, 협업 과정에서 동료의 피드백을 빠르게 수용해 함께 성장합니다. 설계와 트러블슈팅 경험을 블로그에 꾸준히 기록하며 학습을 축적하고 있습니다.",
+  ],
+};
+
+export const homeLabels: HomeLabels = {
+  stack: "Stack",
+  experience: "Experience",
+  selectedProjects: "Selected Projects",
+  refactoringCaseStudy: "Plantify Refactoring Case Study",
+  refactoringLead:
+    "JWKS 기반 로컬 검증 전환, 결제 Saga 정합성, 금전 원장 동시성, 이벤트 후속 처리, AI 스트리밍을 중심으로 MSA 결제 플랫폼 구조 개선",
+  education: "Education",
+  activitiesAndAwards: "Activities & Awards",
+  activities: "Activities",
+  awards: "Awards",
+  qualifications: "Certifications & Languages",
+  certificates: "Certificates",
+  languages: "Languages",
+  viewDetails: "자세히 보기",
+  backToTop: "Back to top",
+  copyright: "© 2026 SeungJuSuh",
 };
 
 export const coreStacks = [
@@ -28,7 +54,7 @@ export const coreStacks = [
 
 export const metrics: Metric[] = [
   ["0회", "보호 API 요청당 Auth 검증 API 호출"],
-  ["17.77ms", "JWKS 로컬 검증 전환 후 p95 응답"],
+  ["17.77ms", "JWKS 기반 로컬 검증 전환 후 p95 응답"],
   ["100%", "WebSocket mock 부하 테스트 연결 성공"],
   ["10+", "MSA 서비스와 CI/CD, 모니터링 구성"],
 ];
@@ -40,6 +66,13 @@ export const projects: Project[] = [
     role: "Backend Developer · PM",
     description:
       "카드 혜택, 펀딩형 기부, 숲 꾸미기, AI 추천 챗봇, 외부 결제 API를 제공하는 MSA 기반 통합 페이 결제 플랫폼",
+    visuals: [
+      {
+        src: projectAssets.plantifyArchitecture,
+        alt: "Plantify 아키텍처 구조도",
+        label: "System Architecture",
+      },
+    ],
     highlights: [
       "10개 이상 MSA 서비스 구성, CI/CD 파이프라인과 Grafana, Prometheus 기반 모니터링 체계 구축",
       "카카오 소셜 로그인, JWT 인증, 아이템 구매, 숲 꾸미기, 펀딩형 기부, 카드 혜택 조회 도메인 구현",
@@ -68,10 +101,18 @@ export const projects: Project[] = [
     role: "Backend Developer · PM",
     description:
       "실시간 가상화폐 시세와 지표를 수집, 가공해 여러 거래소 자산을 한 곳에서 분석하는 투자 분석 서비스",
+    visuals: [
+      {
+        src: projectAssets.bitricsArchitecture,
+        alt: "Bitrics 개발 구조도",
+        label: "System Architecture",
+      },
+    ],
     highlights: [
-      "업비트, 바이낸스 등 다중 거래소 실시간 시세 API 수집 및 가공",
-      "김치 프리미엄, 전일대비 변화율, 24시간 거래대금 등 투자 지표 계산",
-      "카카오 소셜 로그인, 세션 기반 인증, CI/CD 파이프라인과 배포 자동화 구성",
+      "다중 거래소 시세 API 기반 현재가, 전일대비 변화율, 24시간 거래대금, 김치 프리미엄 등 투자 지표 계산",
+      "Passport.js와 express-session 기반 카카오 OAuth2 로그인, 세션 유지, 사용자 정보 복원 흐름 구현",
+      "AWS EC2/RDS/S3, Nginx, CodeDeploy, GitHub Actions 기반 CI/CD 파이프라인 구축",
+      "다중 거래소 투자 내역 통합 자산 조회 기능을 기획하고 API 구조 설계",
     ],
     stacks: ["Node.js", "Upbit API", "Kakao API", "AWS", "GitHub Actions"],
     href: "https://github.com/hk-bitrics",
@@ -83,7 +124,8 @@ export const projects: Project[] = [
     description:
       "실시간 주식 시세, 재무지표, 차트를 기반으로 매수, 매도 시뮬레이션을 제공하는 주식 모의투자 플랫폼",
     highlights: [
-      "실시간 시세, 재무지표 기반 매수·매도 시뮬레이션 로직 설계 및 정합성 관리",
+      "pykrx와 FinanceDataReader 기반 지수, 환율, 주가, 재무지표 데이터 수집 및 차트 데이터 제공",
+      "관심/보유 주식 CRUD와 평가손익, 손익률, 보유일 자동 계산 기반 포트폴리오 관리 기능 구현",
       "Spring Boot와 FastAPI 다중 서버 환경의 JWT 서명 불일치 문제 분석 및 인증 오류 제거",
       "중복 계산 로직 제거와 도메인 구조 리팩토링으로 유지보수성과 로직 일관성 개선",
     ],

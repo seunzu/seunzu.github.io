@@ -1,11 +1,12 @@
-import { externalLinks } from "@/data/profile";
+import { externalLinks } from "@/data/shared";
+import type { Locale } from "@/types/content";
 import { LanguageSwitcher } from "./language-switcher";
 
-export function HomeHeader() {
+export function HomeHeader({ locale }: { locale: Locale }) {
   return (
     <header className="border-b border-[var(--line-strong)] pb-6">
       <div className="mb-5 flex justify-end">
-        <LanguageSwitcher />
+        <LanguageSwitcher locale={locale} />
       </div>
 
       <div>

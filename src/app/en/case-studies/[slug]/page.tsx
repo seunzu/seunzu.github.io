@@ -1,13 +1,13 @@
 import { notFound } from "next/navigation";
 import { CaseStudyDetail } from "@/components/case-study-detail";
 import {
-  caseStudyDetailLabels,
-  getCaseStudyBySlug,
-  getCaseStudyStaticParams,
-} from "@/data/case-studies";
+  caseStudyDetailLabelsEn,
+  getCaseStudyBySlugEn,
+  getCaseStudyStaticParamsEn,
+} from "@/data/case-studies.en";
 
 export function generateStaticParams() {
-  return getCaseStudyStaticParams();
+  return getCaseStudyStaticParamsEn();
 }
 
 type CaseStudyPageProps = {
@@ -18,7 +18,7 @@ type CaseStudyPageProps = {
 
 export async function generateMetadata({ params }: CaseStudyPageProps) {
   const { slug } = await params;
-  const study = getCaseStudyBySlug(slug);
+  const study = getCaseStudyBySlugEn(slug);
 
   if (!study) {
     return {
@@ -27,20 +27,18 @@ export async function generateMetadata({ params }: CaseStudyPageProps) {
   }
 
   return {
-    title: `${study.title} | 서승주`,
+    title: `${study.title} | SeungJuSuh`,
     description: study.summary,
   };
 }
 
-export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
+export default async function EnglishCaseStudyPage({ params }: CaseStudyPageProps) {
   const { slug } = await params;
-  const study = getCaseStudyBySlug(slug);
+  const study = getCaseStudyBySlugEn(slug);
 
   if (!study) {
     notFound();
   }
 
-  return (
-    <CaseStudyDetail backHref="/#work" labels={caseStudyDetailLabels} study={study} />
-  );
+  return <CaseStudyDetail backHref="/en#work" labels={caseStudyDetailLabelsEn} study={study} />;
 }

@@ -1,10 +1,20 @@
-import type { CaseStudy } from "@/types/content";
+import type { CaseStudy, CaseStudyDetailLabels } from "@/types/content";
+
+export const caseStudyDetailLabels: CaseStudyDetailLabels = {
+  backToMain: "메인으로 돌아가기",
+  problem: "문제 상황",
+  causes: "원인",
+  approach: "해결",
+  tradeoffs: "트레이드오프",
+  results: "성과",
+  next: "추가 고민",
+};
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: "jwks-auth",
     label: "Authentication",
-    title: "JWKS 기반 인증 로컬화와 Auth 의존성 완화",
+    title: "JWKS 기반 로컬 검증 전환과 Auth 의존성 완화",
     summary:
       "보호 API 요청마다 발생하던 Auth 검증 API 호출을 JWKS 기반 로컬 검증으로 전환",
     links: [
