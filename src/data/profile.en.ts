@@ -13,11 +13,10 @@ import { projectAssets } from "./shared";
 export const homeIntroEn: IntroContent = {
   title: "Intro",
   headline:
-    "Backend developer focused on structuring problems and continuously improving systems.",
+    "Backend developer who structures problems and keeps exploring better designs after implementation.",
   paragraphs: [
-    "I have designed and built a crypto investment analytics service and an MSA-based payment platform, gaining hands-on experience with transaction consistency and performance in concurrent environments.",
-    "I keep improving systems beyond the first version by tracing performance bottlenecks and strengthening reliability.",
-    "I enjoy challenging environments, adapt quickly to feedback during collaboration, and document design and troubleshooting decisions through technical writing.",
+    "I have designed and implemented MSA-based services and real-time data processing projects, building experience in server responsibility separation, data consistency, and deployment automation.",
+    "After implementation, I continue to analyze bottlenecks and risks, document design and troubleshooting decisions, and improve system structure.",
   ],
 };
 
@@ -25,7 +24,7 @@ export const homeLabelsEn: HomeLabels = {
   stack: "Stack",
   experience: "Experience",
   selectedProjects: "Selected Projects",
-  refactoringCaseStudy: "Plantify Refactoring Case Study",
+  refactoringCaseStudy: "PlantiFy Refactoring Case Study",
   refactoringLead:
     "A record of improving the MSA payment platform around JWKS-based local validation, payment Saga consistency, ledger concurrency, event-driven post-payment processing, and AI response streaming.",
   education: "Education",
@@ -48,9 +47,6 @@ export const coreStacksEn = [
   "FastAPI",
   "Docker",
   "AWS",
-  "GitHub Actions",
-  "Prometheus",
-  "Grafana",
 ];
 
 export const metricsEn: Metric[] = [
@@ -70,13 +66,14 @@ export const projectsEn: Project[] = [
     visuals: [
       {
         src: projectAssets.plantifyArchitecture,
-        alt: "Plantify architecture diagram",
+        alt: "PlantiFy architecture diagram",
         label: "System Architecture",
       },
     ],
     highlights: [
-      "Built 10+ MSA services with CI/CD pipelines and Grafana/Prometheus-based monitoring",
-      "Implemented Kakao social login, JWT authentication, item purchase, forest decoration, donation funding, and card benefit domains",
+      "Built 10+ MSA services, CI/CD pipelines, and automated deployment flows",
+      "Set up Grafana/Prometheus-based monitoring and standardized service-level error responses",
+      "Implemented core domain APIs including Kakao social login, JWT authentication, item purchase, donation funding, and card benefit lookup",
       "Implemented B2C payment, cancellation, refund, point rewards, and B2B payment APIs for partner services",
     ],
     stacks: [
@@ -137,7 +134,7 @@ export const projectsEn: Project[] = [
 
 export const experienceEn: TimelineItem[] = [
   {
-    period: "2025.01 ~ 2025.03",
+    period: "2025.01 ~ 2025.04",
     title: "Hwiya",
     body: "Software Engineer · Freelance",
     stacks: [

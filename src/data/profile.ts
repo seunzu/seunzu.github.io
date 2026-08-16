@@ -12,11 +12,10 @@ import { projectAssets } from "./shared";
 
 export const homeIntro: IntroContent = {
   title: "Intro",
-  headline: "문제를 구조적으로 정의하고 끝까지 개선하는 개발자 서승주입니다.",
+  headline: "문제를 구조적으로 정의하고 구현 이후에도 더 나은 구조를 탐색하는 개발자 서승주입니다.",
   paragraphs: [
-    "가상화폐 투자 분석 서비스와 MSA 기반 결제 플랫폼을 주도적으로 설계하고 구축하며 동시성 환경에서의 트랜잭션 정합성과 처리 성능을 함께 다루는 경험을 쌓았습니다.",
-    "v1에서 멈추지 않고 성능 병목을 추적하고 안정성을 반복적으로 개선합니다.",
-    "도전적인 환경을 선호하며, 협업 과정에서 동료의 피드백을 빠르게 수용해 함께 성장합니다. 설계와 트러블슈팅 경험을 블로그에 꾸준히 기록하며 학습을 축적하고 있습니다.",
+    "MSA 기반 서비스와 실시간 데이터 처리 프로젝트를 설계하고 구현하며 서버 책임 분리, 데이터 정합성, 배포 자동화 경험을 쌓았습니다.",
+    "구현 이후에도 병목과 리스크를 분석하고 설계와 트러블슈팅을 기록하며 구조를 개선해왔습니다.",
   ],
 };
 
@@ -24,7 +23,7 @@ export const homeLabels: HomeLabels = {
   stack: "Stack",
   experience: "Experience",
   selectedProjects: "Selected Projects",
-  refactoringCaseStudy: "Plantify Refactoring Case Study",
+  refactoringCaseStudy: "PlantiFy Refactoring Case Study",
   refactoringLead:
     "JWKS 기반 로컬 검증 전환, 결제 Saga 정합성, 금전 원장 동시성, 이벤트 후속 처리, AI 스트리밍을 중심으로 MSA 결제 플랫폼 구조 개선",
   education: "Education",
@@ -47,9 +46,6 @@ export const coreStacks = [
   "FastAPI",
   "Docker",
   "AWS",
-  "GitHub Actions",
-  "Prometheus",
-  "Grafana",
 ];
 
 export const metrics: Metric[] = [
@@ -69,14 +65,15 @@ export const projects: Project[] = [
     visuals: [
       {
         src: projectAssets.plantifyArchitecture,
-        alt: "Plantify 아키텍처 구조도",
+        alt: "PlantiFy 아키텍처 구조도",
         label: "System Architecture",
       },
     ],
     highlights: [
-      "10개 이상 MSA 서비스 구성, CI/CD 파이프라인과 Grafana, Prometheus 기반 모니터링 체계 구축",
-      "카카오 소셜 로그인, JWT 인증, 아이템 구매, 숲 꾸미기, 펀딩형 기부, 카드 혜택 조회 도메인 구현",
-      "B2C 자체 결제/취소/환불 및 포인트 적립, B2B 제휴 서비스용 결제 API 구현",
+      "10개 이상 MSA 서비스 구성, CI/CD 파이프라인 구축 및 배포 자동화",
+      "Grafana, Prometheus 기반 모니터링 체계와 서비스별 에러 응답 표준화 구성",
+      "카카오 소셜 로그인, JWT 인증, 아이템 구매, 펀딩형 기부, 카드 혜택 조회 등 주요 도메인 API 구현",
+      "B2C 자체 결제, 취소, 환불, 포인트 적립 및 B2B 제휴 서비스용 결제 API 구현",
     ],
     stacks: [
       "Spring Boot",
@@ -136,7 +133,7 @@ export const projects: Project[] = [
 
 export const experience: TimelineItem[] = [
   {
-    period: "2025.01 ~ 2025.03",
+    period: "2025.01 ~ 2025.04",
     title: "(주)휘야",
     body: "Software Engineer · 프리랜서",
     stacks: [
