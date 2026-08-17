@@ -12,11 +12,9 @@ import { projectAssets } from "./shared";
 
 export const homeIntroEn: IntroContent = {
   title: "Intro",
-  headline:
-    "Backend developer who structures problems and keeps exploring better designs after implementation.",
+  headline: "Defines problems clearly and improves system design beyond initial implementation.",
   paragraphs: [
-    "I have designed and implemented MSA-based services and real-time data processing projects, building experience in server responsibility separation, data consistency, and deployment automation.",
-    "After implementation, I continue to analyze bottlenecks and risks, document design and troubleshooting decisions, and improve system structure.",
+    "Experienced in MSA-based services and real-time data processing projects, with a focus on service responsibility separation, data consistency, deployment automation, and troubleshooting-driven improvement.",
   ],
 };
 
@@ -62,7 +60,7 @@ export const projectsEn: Project[] = [
     title: "PlantiFy",
     role: "Backend Developer · PM",
     description:
-      "An MSA-based integrated payment platform providing card benefits, donation funding, forest decoration, an AI recommendation chatbot, and external payment APIs.",
+      "MSA-based payment platform for card benefits, donation funding, virtual forest items, AI chatbot recommendations, and external payment APIs.",
     visuals: [
       {
         src: projectAssets.plantifyArchitecture,
@@ -71,10 +69,10 @@ export const projectsEn: Project[] = [
       },
     ],
     highlights: [
-      "Built 10+ MSA services, CI/CD pipelines, and automated deployment flows",
-      "Set up Grafana/Prometheus-based monitoring and standardized service-level error responses",
-      "Implemented core domain APIs including Kakao social login, JWT authentication, item purchase, donation funding, and card benefit lookup",
-      "Implemented B2C payment, cancellation, refund, point rewards, and B2B payment APIs for partner services",
+      "Built 10+ MSA services and automated CI/CD deployment workflows",
+      "Set up Prometheus and Grafana monitoring and standardized service-level error responses",
+      "Implemented Kakao login, JWT authentication, item purchase, donation funding, and card benefit APIs",
+      "Built B2C payment, cancellation, refund, point reward flows, and B2B payment APIs for partner services",
     ],
     stacks: [
       "Spring Boot",
@@ -98,7 +96,7 @@ export const projectsEn: Project[] = [
     title: "Bitrics",
     role: "Backend Developer · PM",
     description:
-      "A crypto investment analytics service that collects and processes real-time market data and indicators from multiple exchanges.",
+      "Crypto investment analytics service for real-time market data and multi-exchange asset tracking.",
     visuals: [
       {
         src: projectAssets.bitricsArchitecture,
@@ -107,10 +105,9 @@ export const projectsEn: Project[] = [
       },
     ],
     highlights: [
-      "Calculated investment indicators such as current price, daily change rate, 24-hour trading volume, and kimchi premium using multi-exchange market data APIs",
-      "Implemented Kakao OAuth2 login, session persistence, and user restoration flows using Passport.js and express-session",
-      "Built CI/CD pipelines with AWS EC2/RDS/S3, Nginx, CodeDeploy, and GitHub Actions",
-      "Planned and designed API structures for integrated asset lookup across multiple crypto exchanges",
+      "Collected market data from multiple exchange APIs and calculated investment indicators",
+      "Implemented Kakao login, session-based authentication, and user session restoration",
+      "Automated deployment with AWS CodeDeploy and GitHub Actions",
     ],
     stacks: ["Node.js", "Upbit API", "Kakao API", "AWS", "GitHub Actions"],
     href: "https://github.com/hk-bitrics",
@@ -120,12 +117,11 @@ export const projectsEn: Project[] = [
     title: "Tusori",
     role: "Backend Developer · PM",
     description:
-      "A stock investment simulation platform based on real-time stock prices, financial indicators, and charts.",
+      "Stock investment simulation platform for real-time market data, financial indicators, charts, and buy/sell simulations.",
     highlights: [
-      "Collected index, exchange rate, stock price, and financial indicator data with pykrx and FinanceDataReader and provided chart data",
-      "Implemented watchlist/holding CRUD and portfolio management with automatic profit/loss, return rate, and holding period calculations",
-      "Analyzed and resolved JWT signature mismatch issues across Spring Boot and FastAPI servers",
-      "Refactored duplicated calculation logic and domain structure to improve maintainability and consistency",
+      "Collected stock, index, exchange-rate, and financial indicator data with pykrx and FinanceDataReader",
+      "Built portfolio features for watchlists, holdings, profit/loss, returns, and holding periods",
+      "Resolved JWT signature mismatches between Spring Boot and FastAPI services",
     ],
     stacks: ["Spring Boot", "JPA", "FastAPI", "Kakao API", "AWS", "Nginx", "JWT"],
     href: "https://github.com/Tu-Sori",
@@ -148,9 +144,9 @@ export const experienceEn: TimelineItem[] = [
       "GitHub Actions",
     ],
     details: [
-      "Designed the initial domain model, ERD, and user flow for a travel service MVP",
-      "Implemented NestJS and Prisma-based APIs with standardized error handling and response formats",
-      "Integrated the Next.js frontend with backend APIs and configured deployment using GitHub Actions and AWS",
+      "Designed the initial domain model, ERD, and user flows for the MVP",
+      "Built NestJS and Prisma APIs with standardized error handling and response formats",
+      "Integrated backend APIs with the Next.js frontend and configured AWS deployment via GitHub Actions",
     ],
   },
 ];
@@ -159,12 +155,12 @@ export const educationEn: TimelineItem[] = [
   {
     period: "2020.03 - 2025.02",
     title: "Seoul Women's University",
-    body: "Software Convergence / Economics, double major",
-    note: "Published a paper on an ingredient-based quasi-drug recommendation service for visually impaired users at the Korea Multimedia Society",
+    body: "B.S. in Software Convergence; Double Major in Economics",
+    note: "Published in the Korea Multimedia Society Fall Conference Proceedings · Ingredient-Based Recommendation Service for Daily Health Products for Visually Impaired Users",
   },
   {
     period: "2024.06 ~ 2024.12",
-    title: "Tech Full Stack Program",
+    title: "K-Digital Training Full-Stack Developer Program",
     note: "The Korea Economic Daily · Toss Bank",
     body: "Studied full-stack development across modern web technologies, backend development, cloud services, databases, and deployment operations",
   },
@@ -183,8 +179,8 @@ export const activitiesEn: Activity[] = [
     title: "E-PLE",
     role: "Member",
     details: [
-      "Analyzed economic and financial issues, company cases, and market topics through regular discussions",
-      "Participated in monetary policy simulation competitions, including the 2023 Monetary Policy Challenge",
+      "Analyzed economic, financial, and market issues through company research and discussions",
+      "Participated in the 2023 Monetary Policy Challenge",
     ],
   },
   {
@@ -193,9 +189,8 @@ export const activitiesEn: Activity[] = [
     title: "Cotato",
     role: "President",
     details: [
-      "Led operations for an IT club with 40+ members",
-      "Organized regular sessions, study groups, projects, and hackathons",
-      "Prepared CS education sessions and IT issue briefings",
+      "Led operations for a 40+ member student IT organization",
+      "Organized sessions, study groups, projects, hackathons, CS education, and IT issue briefings",
     ],
   },
 ];
@@ -219,7 +214,7 @@ export const awardsEn: Award[] = [
     date: "2023.12",
     award: "Bronze Prize",
     event: "Capstone Design Competition",
-    project: "Ingredient-based quasi-drug recommendation service for visually impaired users",
+    project: "Ingredient-Based Recommendation Service for Daily Health Products for Visually Impaired Users",
     organizer: "Seoul Women's University",
   },
 ];
@@ -240,6 +235,7 @@ export const certificatesEn: SimpleCredential[] = [
 ];
 
 export const languagesEn: SimpleCredential[] = [
+  { name: "Korean", level: "Native" },
   { date: "2024.09", name: "English", level: "OPIc · IM3" },
   { date: "2026.06", name: "Chinese", level: "HSK Level 4" },
 ];

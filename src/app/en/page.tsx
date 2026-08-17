@@ -16,9 +16,9 @@ import {
 } from "@/data/profile.en";
 
 export const metadata: Metadata = {
-  title: "SeungJuSuh | Backend Developer",
+  title: "SeungJuSuh | Software Engineer",
   description:
-    "English portfolio of SeungJuSuh, a backend developer focused on payment systems, authentication, and distributed consistency.",
+    "English portfolio of SeungJuSuh, a software engineer focused on structuring problems and improving system design after implementation.",
 };
 
 export default function EnglishHome() {
