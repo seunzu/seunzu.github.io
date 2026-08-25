@@ -100,7 +100,7 @@ export type CaseStudy = {
 export type CaseStudyLink = {
   label: string;
   href: string;
-  type: "refactor" | "blog";
+  type: "refactor" | "blog" | "note";
 };
 
 export type Metric = readonly [value: string, label: string];

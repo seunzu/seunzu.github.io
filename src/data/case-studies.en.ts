@@ -28,6 +28,11 @@ export const caseStudiesEn: CaseStudy[] = [
         href: "https://debug.tistory.com/564",
         type: "blog",
       },
+      {
+        label: "Auth JWKS Local Validation",
+        href: "https://app.notion.com/p/0123suh/Auth-JWKS-Local-Validation-3b886c5edd3f80ca8c59e5abf35ceaf2?source=copy_link",
+        type: "note",
+      },
     ],
     problem: [
       "Each protected API request called the Auth server's /validate-token endpoint",
@@ -79,6 +84,11 @@ export const caseStudiesEn: CaseStudy[] = [
         label: "Related Blog",
         href: "https://debug.tistory.com/515",
         type: "blog",
+      },
+      {
+        label: "Payment Orchestration & Ledger Consistency",
+        href: "https://app.notion.com/p/0123suh/Payment-Orchestration-Ledger-Consistency-3be86c5edd3f80fe985cf56b92bba880?source=copy_link",
+        type: "note",
       },
     ],
     problem: [
@@ -135,6 +145,11 @@ export const caseStudiesEn: CaseStudy[] = [
         href: "https://debug.tistory.com/515",
         type: "blog",
       },
+      {
+        label: "Payment Orchestration & Ledger Consistency",
+        href: "https://app.notion.com/p/0123suh/Payment-Orchestration-Ledger-Consistency-3be86c5edd3f80fe985cf56b92bba880?source=copy_link",
+        type: "note",
+      },
     ],
     problem: [
       "Multiple Pods could process payment requests for the same user at the same time",
@@ -182,6 +197,11 @@ export const caseStudiesEn: CaseStudy[] = [
         href: "https://github.com/seunzu/plantify-msa-payment-refactor",
         type: "refactor",
       },
+      {
+        label: "Payment Orchestration & Ledger Consistency",
+        href: "https://app.notion.com/p/0123suh/Payment-Orchestration-Ledger-Consistency-3be86c5edd3f80fe985cf56b92bba880?source=copy_link",
+        type: "note",
+      },
     ],
     problem: [
       "Including point reward and settlement follow-up work in the payment response flow could increase response latency",
@@ -227,6 +247,11 @@ export const caseStudiesEn: CaseStudy[] = [
         label: "Chat Refactor Repository",
         href: "https://github.com/seunzu/plantify-msa-chat-refactor",
         type: "refactor",
+      },
+      {
+        label: "Chat WebSocket & gRPC Streaming",
+        href: "https://app.notion.com/p/0123suh/Chat-WebSocket-gRPC-Streaming-3be86c5edd3f806aa3beec8e9505ab15?source=copy_link",
+        type: "note",
       },
     ],
     problem: [

@@ -28,6 +28,11 @@ export const caseStudies: CaseStudy[] = [
         href: "https://debug.tistory.com/564",
         type: "blog",
       },
+      {
+        label: "Auth JWKS Local Validation",
+        href: "https://app.notion.com/p/0123suh/Auth-JWKS-Local-Validation-3b886c5edd3f80ca8c59e5abf35ceaf2?source=copy_link",
+        type: "note",
+      },
     ],
     problem: [
       "기존 구조는 보호 API 요청마다 Auth 서버의 /validate-token을 호출하는 방식",
@@ -78,6 +83,11 @@ export const caseStudies: CaseStudy[] = [
         label: "Related Blog",
         href: "https://debug.tistory.com/515",
         type: "blog",
+      },
+      {
+        label: "Payment Orchestration & Ledger Consistency",
+        href: "https://app.notion.com/p/0123suh/Payment-Orchestration-Ledger-Consistency-3be86c5edd3f80fe985cf56b92bba880?source=copy_link",
+        type: "note",
       },
     ],
     problem: [
@@ -132,6 +142,11 @@ export const caseStudies: CaseStudy[] = [
         href: "https://debug.tistory.com/515",
         type: "blog",
       },
+      {
+        label: "Payment Orchestration & Ledger Consistency",
+        href: "https://app.notion.com/p/0123suh/Payment-Orchestration-Ledger-Consistency-3be86c5edd3f80fe985cf56b92bba880?source=copy_link",
+        type: "note",
+      },
     ],
     problem: [
       "동일 사용자의 결제 요청이 여러 Pod에서 동시에 처리될 수 있음",
@@ -178,6 +193,11 @@ export const caseStudies: CaseStudy[] = [
         href: "https://github.com/seunzu/plantify-msa-payment-refactor",
         type: "refactor",
       },
+      {
+        label: "Payment Orchestration & Ledger Consistency",
+        href: "https://app.notion.com/p/0123suh/Payment-Orchestration-Ledger-Consistency-3be86c5edd3f80fe985cf56b92bba880?source=copy_link",
+        type: "note",
+      },
     ],
     problem: [
       "포인트 적립과 정산 후속 처리가 결제 응답 흐름에 포함되면 응답 지연과 장애 전파 가능성 발생",
@@ -222,6 +242,11 @@ export const caseStudies: CaseStudy[] = [
         label: "Chat Refactor Repository",
         href: "https://github.com/seunzu/plantify-msa-chat-refactor",
         type: "refactor",
+      },
+      {
+        label: "Chat WebSocket & gRPC Streaming",
+        href: "https://app.notion.com/p/0123suh/Chat-WebSocket-gRPC-Streaming-3be86c5edd3f806aa3beec8e9505ab15?source=copy_link",
+        type: "note",
       },
     ],
     problem: [

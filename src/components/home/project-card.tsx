@@ -53,7 +53,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </button>
         ))}
         <a className={text.link} href={project.href} target="_blank" rel="noreferrer">
-          {project.href.replace("https://", "")}
+          GitHub
         </a>
       </div>
 

@@ -65,7 +65,9 @@ function StudyLinks({ links }: { links: CaseStudyLink[] }) {
           target="_blank"
           rel="noreferrer"
         >
-          {link.href.replace("https://", "")}
+          {link.type === "refactor" ? "GitHub" : null}
+          {link.type === "blog" ? "Blog" : null}
+          {link.type === "note" ? "Design Note" : null}
         </a>
       ))}
     </div>
