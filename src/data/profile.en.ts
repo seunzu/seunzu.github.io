@@ -130,7 +130,7 @@ export const projectsEn: Project[] = [
 
 export const experienceEn: TimelineItem[] = [
   {
-    period: "2025.01 ~ 2025.04",
+    period: "2025.02 ~ 2025.05",
     title: "Hwiya",
     body: "Software Engineer · Freelance",
     stacks: [
@@ -236,6 +236,6 @@ export const certificatesEn: SimpleCredential[] = [
 
 export const languagesEn: SimpleCredential[] = [
   { name: "Korean", level: "Native" },
-  { date: "2024.09", name: "English", level: "OPIc · IM3" },
+  { date: "2026.09", name: "English", level: "TOEIC Speaking · AL" },
   { date: "2026.06", name: "Chinese", level: "HSK Level 4" },
 ];
